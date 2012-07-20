@@ -3519,3 +3519,240 @@ Processing by ProfilesController#destroy as HTML
 Redirected to http://test.host/profiles
 Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
   [1m[35m (0.5ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$h9ImzK4F8/8yhKS01Hav5.NnYhunbmRlv8UeEA/oJCxuJXe1Grcce', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT `profiles`.* FROM `profiles` [0m
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (6.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$BHJqWv17Gks0vWeKLHNLie27OFxt898Vh6GmOmgD7OFACeAMuZEUu', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (10.4ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$lsxRH/Ffl8JKmaBhCvvaBuuznJgfPT1/MpTVVzgxrskcAjFHV/5re', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Completed 200 OK in 10ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (8.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$ReMwaF1iiOr95mYmvBAMiewNGx76ZTa4NERzqNii7LHI7TMRgGXMm', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (3.8ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$KozMfMZ6nC7NCInsaA0h6OpjihE4Dzi1FeEZm7Ny8yygGJ9lxaJ/y', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `profiles` 
+Processing by ProfilesController#create as HTML
+  Parameters: {"profile"=>{"user_name"=>"Kate Moss", "user_type"=>"Model", "about_me"=>"I'm a model! I strike poses", "references"=>"All photographers love me"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/profiles/4
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `profiles` [0m
+  [1m[35m (3.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$DHzkRik2TxwHGD/irg1V/Ow7BhxkcBRX0SfVlo8oeS1KNpv9kS/Du', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#create as HTML
+  Parameters: {"profile"=>{"user_name"=>"Kate Moss", "user_type"=>"Model", "about_me"=>"I'm a model! I strike poses", "references"=>"All photographers love me"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/profiles/5
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (2.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$i83S3tB7nWyCfi6j8qHs7.guEd3dE7jbBVYDGwxVeZW2Ix7xaqGxO', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#create as HTML
+  Parameters: {"profile"=>{"user_name"=>"Kate Moss", "user_type"=>"Model", "about_me"=>"I'm a model! I strike poses", "references"=>"All photographers love me"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/profiles/6
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT `profiles`.* FROM `profiles` ORDER BY `profiles`.`id` DESC LIMIT 1
+  [1m[36m (11.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$F1Z5.IjGzOB0Rrma2gctI.2y.dg15xOsrhFTdYa6rHYqYvMRVnvBu', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProfilesController#create as HTML
+  Parameters: {"profile"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (5.3ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$VrDbn8.Sn65yWPT0yEEiGua1RAGaT1Y8J0FOe5j2zhxV9Z.rOog1u', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#create as HTML
+  Parameters: {"profile"=>{}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (9.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$ySU7uzENzOrW1nFg4yb4WeqXHDosshuwRhn7lZCfcfL0noYaD7xq6', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#update as HTML
+  Parameters: {"profile"=>{"these"=>"params"}, "id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (2.3ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$mnShsQCEjV2LZwuYIxesLOxzox9sBfOJkQlt1pf6DKCWRlvzUN93m', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProfilesController#update as HTML
+  Parameters: {"profile"=>{"user_name"=>"Kate Moss", "user_type"=>"Model", "about_me"=>"I'm a model! I strike poses", "references"=>"All photographers love me"}, "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 8 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/profiles/8
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (7.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$VpmQYssl2F6T5Ru.dCzuuubMGkQXqEK/ByGlf5b1TXNYlvkmCRWe6', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#update as HTML
+  Parameters: {"profile"=>{"user_name"=>"Kate Moss", "user_type"=>"Model", "about_me"=>"I'm a model! I strike poses", "references"=>"All photographers love me"}, "id"=>"9"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/profiles/9
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (4.5ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$KAvmBUtXxi/mxNSdcc/uF.PyjwXLuiWmXMshkUapFMpJzmsfIfcRa', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProfilesController#update as HTML
+  Parameters: {"profile"=>{}, "id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 10 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (8.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$S5Gpyq9z471uGiM06FPJMOK6Peo9GRvGDsfS2xRzti3NhfJ36uAd2', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProfilesController#update as HTML
+  Parameters: {"profile"=>{}, "id"=>"11"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (10.6ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$/l/RWZ43lHavL12dcdtvoOe7iVl3iEkL5gRSxuRUEk8eVu8sym0yW', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `profiles` [0m
+Processing by ProfilesController#destroy as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `profiles` WHERE `profiles`.`id` = 12[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/profiles
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `profiles` [0m
+  [1m[35m (1.7ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'model@photoshoot.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `first_name`, `last_name`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-07-20 03:46:49', NULL, NULL, 'model@photoshoot.com', '$2a$04$pKU4yXccxx1Ro.lCZ0VJouTch6qcP9r5TuS.oJFJrgesUqq8f.ura', 'Kate', 'Moss', NULL, NULL, NULL, NULL, NULL, 0, '2012-07-20 03:46:49')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `profiles` (`about_me`, `created_at`, `references`, `updated_at`, `user_id`, `user_name`, `user_type`) VALUES ('I\'m a model! I strike poses', '2012-07-20 03:46:49', 'All photographers love me', '2012-07-20 03:46:49', NULL, 'Kate Moss', 'Model')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProfilesController#destroy as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 13 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM `profiles` WHERE `profiles`.`id` = 13
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/profiles
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
