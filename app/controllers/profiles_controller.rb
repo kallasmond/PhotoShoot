@@ -33,7 +33,7 @@ class ProfilesController < ApplicationController
   end
   
   def create
-    @profile = Profile.new(params[:profile])
+    @profile = Profile.new(params[:profile].merge(:user_id => current_user.id))
 
     respond_to do |format|
       if @profile.save

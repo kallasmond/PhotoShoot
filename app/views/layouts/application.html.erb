@@ -20,13 +20,15 @@
           <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
         <% end %>
       </li>
-      <li>
-        <% if current_user.profile.nil?  %>
-          <%= link_to "Create Profile", new_profile_path %>
-        <% else %>
-          <%= link_to "My Profile", @profile %>
-        <% end %>
-      </li>
+      <% if user_signed_in? %>
+        <li>
+          <% if current_user.profile.nil?  %>
+            <%= link_to "Create Profile", new_profile_path %>
+          <% else %>
+            <%= link_to "My Profile", current_user.profile %>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </div>
   <p class="notice"><%= notice %></p>
